@@ -1,0 +1,36 @@
+/* Reset & basic styles */
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: Arial, sans-serif; background: #fff; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; transition: background 0.3s, color 0.3s; }
+.cv-container { max-width: 900px; padding: 20px; text-align: center; }
+
+/* Theme Toggle */
+.theme-toggle { position: fixed; top: 20px; right: 20px; cursor: pointer; font-size: 24px; }
+
+/* Dark Mode */
+body.dark-mode { background: #111; color: #eee; }
+body.dark-mode a { color: #ffcc00; }
+
+/* Profile */
+.profile img { width: 150px; border-radius: 50%; margin-bottom: 10px; }
+
+/* Skills */
+.skills { margin: 40px 0; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.skill svg { transform: rotate(-90deg); width: 100px; height: 100px; }
+.skill circle { fill: none; stroke: #eee; stroke-width: 10; }
+.skill circle:nth-child(2) { stroke: #5A0C24; stroke-dasharray: 283; stroke-dashoffset: 283; transition: stroke-dashoffset 1s, stroke 0.3s; }
+.skill circle:hover:nth-child(2) { stroke: #ff5733; }
+
+/* Timeline */
+.timeline { margin: 40px 0; }
+.timeline-item { display: flex; align-items: center; margin: 20px 0; cursor: pointer; transition: color 0.3s; }
+.timeline-item .dot { width: 15px; height: 15px; background: #5A0C24; border-radius: 50%; margin-right: 20px; transition: background 0.3s; }
+.timeline-item:hover .dot { background: #ff5733; }
+.timeline-item .content h3, .timeline-item .content p { transition: color 0.3s; }
+.timeline-item:hover .content h3, .timeline-item:hover .content p { color: #ff5733; }
+
+/* Links */
+.links a { display: block; margin: 10px 0; color: #5A0C24; text-decoration: none; transition: color 0.3s; }
+.links a:hover { color: #ff5733; }
+
+/* Responsive */
+@media (max-width: 768px) { .skills { flex-direction: column; } }
